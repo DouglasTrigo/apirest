@@ -24,7 +24,7 @@ public class DepartamentoController {
         service.definirChefe(idDepartamento, request);
     }
 
-    @ApiOperation(value =  "Lista os funcionarios do departamento (paginado)")
+    @ApiOperation(value =  "Lista os funcionarios do departamento")
     @GetMapping("/{idDepartamento}/funcionarios")
     public List<FuncionarioResponse> funcionariosDoDepartamento(@PathVariable Long idDepartamento){
         return service.getFuncionariosDoDepartamento(idDepartamento);
